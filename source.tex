@@ -1,0 +1,215 @@
+%-------------------------
+% Resume in Latex
+% Based on: https://github.com/wilmeragsgh/resume/
+% requires: sudo apt install texlive-full
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% Page coloring, fonts, and logos
+\usepackage{pagecolor}
+\usepackage{lato}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{fontawesome}
+% ---
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% ---
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{1pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+% ---
+
+% Custom commands
+
+\newcommand{\sepsection}{\vspace{25pt}}
+
+\newcommand{\resumeItem}[1]{%2
+  \item\small{
+    %\textbf{#1}
+    #1
+    %{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{8pt}\item%-1
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{1pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeTech}[2]{
+ \underline{#1:} #2
+}
+
+% COLOR THEMES SELECTION
+\colorlet{textcolor}{black}
+\colorlet{urlcolor}{red}
+
+\begin{document}
+
+% HEADING
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Abel A. Mengistu} & \href{tel:202-492-4738}{\color{urlcolor}{\faicon{phone}} \color{textcolor}  202-492-4738} \\
+  Software Engineer & \href{mailto:mengistu.abel@gmail.com}{\color{urlcolor}{\faicon{envelope}} \color{textcolor} mengistu.abel@gmail.com} \\
+  \textsl{District Of Columbia, USA} & \href{https://github.com/abeloof}{  \color{urlcolor}{\faicon{github}} \color{textcolor} www.github.com/abeloof}
+\end{tabular*}
+% ---
+
+% EXPERIENCE
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {GreenDot Corporation}{(remote) DC, USA}
+      {Sr. Software Engineer}{October 2021 - February 2024}
+      \resumeItemListStart
+      \resumeItem{Participated in daily agile scrum meetings, collaborating with cross-functional teams from US and China to design, develop, and successfully implement new features, and resolve production bugs for banking-as-a-service(baas) platform.}
+      \resumeItem{Closely collaborated with product and quality assurance teams to gather requirements, design system specifications, create feature acceptance test cases, and deliver a well-designed and thoroughly tested microservice applications.}
+      \resumeItem{Served as a key member of the core team that transitioned GreenDot's payment systems to new payment processor using microsoft azure; created an initial proof-of-concept for azure functions, azure durable functions, azure appservice authentications, and provided support to other teams as needed when production issues arose.}
+      \resumeItemListEnd
+      \resumeTech{Technologies}{aws, azure, git, perforce, teamcity, c\#, .net 6, datadog, sonarqube, powershell, rabbitmq, cassandra, redis, activebatch, elasticsearch, ms-sql, docker, linux}\\
+    \sepsection
+    \resumeSubheading
+      {Motions Recruitment}{Arlington, VA}
+      {Sr. Net Developer}{February 2020 - June 2020}
+      \resumeItemListStart
+      \resumeItem{Participated in developing, maintaining, and upgrading a cloud native healthcheck-as-a-service(haas) web application for internal development teams.}
+      \resumeItem{Integrated existing angular \& asp.net core applications with azure ad to allow single-sign-on (sso) and a role based access to api resources.}
+      \resumeItemListEnd
+      \resumeTech{Technologies}{azure, c\#, .net core, .net standard, asp.net, azure devops, typescript, angular, ms-sql, redis, signalr, docker, linux }\\
+    \sepsection
+    \resumeSubheading
+      {Evolent Health}{Arlington, VA}
+      {Sr. Software Engineer}{February 2016 - January 2019}
+      \resumeItemListStart
+      \resumeItem{Participated in daily and weekly agile scrum ceremonies, including planning, grooming, and daily stand-ups, to drive the development, maintenance, and implementation of new features for a software-as-a-service healthcare web application.}
+      \resumeItem{Participated in sdlc process, including requirement gathering, design and documentation, implementation, unit testing, conducting code reviews, updating continuous integration and delivery pipelines, and supporting post-production deployment bug fixes, to enhance and add new features into existing Evolent Health’s Identifi platform.}
+      \resumeItemListEnd
+      \resumeTech{Technologies}{azure, c\#, .net core, .net standard, asp.net, vsts/tfs, teamcity, elk, javascript, nodejs, angularjs, ms-sql, sonarqube, redis, rabbitmq, masstransit, docker, linux }\\
+    \sepsection
+    \resumeSubheading
+      {Matrix Group International}{Crystal City, VA}
+      {Web Developer}{April 2015 - September 2015}
+      \resumeItemListStart
+      \resumeItem{Maintained and enhanced sitefinity based web applications, used internally by employees of professional associations and their members.}
+      \resumeItem{Developed custom sitefinity modules and api's, enabling seamless data access and storage for customized dynamic client-side sitefinity pages.}
+      \resumeItemListEnd
+      \resumeTech{Technologies}{c\#, .net framework, php, tfs, teamcity, javascript, angularjs, ms-sql, redis, iis, sitefinity, jira }\\
+      \newpage
+    \resumeSubheading
+      {Towers Watson}{Arlington, VA}
+      {Software Developer}{April 2014 - March 2015}
+      \resumeItemListStart
+      \resumeItem{Maintained, upgraded, and implemented new client-specific pension plan features for a software-as-a-service(saas) benefit administration web application.}
+      \resumeItem{Coordinated with multiple project and client team members to develop and deliver, a fully tested custom pension administration web applications.}
+      \resumeItem{Wrote and optimized stored procedure \& sql scripts to extract unique data for dynamic reports.}
+      \resumeItem{Took on various roles per project; tech lead, pension calculator developer (c\# or c), all other developer (ui, api resources \& sql) and izenda reports developer (sql).}
+      \resumeItemListEnd
+      \resumeTech{Technologies}{c\#, c, vb, asp, redgate ci, vsts/tfs, javascript, angularjs, ms-sql, redis, iis }\\
+    \sepsection
+    \resumeSubheading
+      {DealerOn Inc}{Rockville, MD}
+      {Software Developer}{May 2013 - April 2014}
+      \resumeItemListStart
+      \resumeItem{Participated in daily kanban production software releases which included production bug fixes, platform improvement and new feature roll outs for a software-as-a-service automotive content relational and inventory management web applications.}
+      \resumeItem{Worked closely with account managers and production managers to generate various system change specifications document.}
+      \resumeItemListEnd
+      \resumeTech{Technologies}{c\#, vb, python, teamcity, tfs, mercurialhg, javascript, angularjs, ms-sql, redis, iis, jira }\\   
+\resumeSubHeadingListEnd
+% PROGRAMMING SKILLS
+\section{Technical skills}
+  \resumeSubHeadingListStart
+  
+  \resumeSubItem{\textbf{Programming languages:} C\#, Typescript, Javascript, VB, HTML, CSS}
+  
+  \resumeSubItem{\textbf{Cloud services:} AWS (Lambda, S3), GCP (Storage), Azure (Blob/Table storage, CosmosDB, Functions, AppService, Queues, ServiceBus, EventHub, Durable Functions).}
+  
+  \resumeSubItem{\textbf{UI frameworks:} AngularJs, Angular, ReactJs}
+  
+  \resumeSubItem{\textbf{Others:} Docker, Kubernetes, Powershell, Python, C, Java}
+
+  \resumeSubItem{\textbf{Currently learning:} Kubernetes.}
+  
+  \resumeSubHeadingListEnd
+
+% EDUCATION
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Maryland, Baltimore County}{Baltimore, MD}
+      {B.Sc in Information Systems}{Jan. 2009 -- Aug. 2011}
+    \resumeSubheading
+      {Montogomery College}{Takoma Park, MD}
+      {A.A in Computer Information Systems (transfered)}{June 2006 -- Dec. 2008}  
+  \resumeSubHeadingListEnd
+% CERTIFICATIONS
+\section{Certifications}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {@ University of Maryland, Baltimore County}{}
+      {Network Administration Certificate}{Issued on August 2011}
+    \resumeSubheading
+      {@ Microsoft}{}
+      {\href{https://learn.microsoft.com/api/credentials/share/en-us/AbelM-7089/2CD8D55E67CA05CE?sharingId=1EAA6EDBC20E2089}{Microsoft Certified: Azure Developer Associate}}{Expires on October 2025}
+  \resumeSubHeadingListEnd
+% ---
+
+%\newpage
+\vspace{1em}
+% PROJECTS
+\section{Personal Projects / Hobbies}
+
+  \resumeSubHeadingListStart
+    \resumeSubItem{Homelab: personal cloud} \\
+    \resumeSubItem{Soccer} \\
+    \resumeSubItem{Cooking} \\
+  \resumeSubHeadingListEnd
+% ---
+
+\vspace{1em}
+
+\end{document}
